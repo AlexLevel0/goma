@@ -1,0 +1,76 @@
+body {
+
+-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+
+  margin: 0;
+  padding: 0;
+  background: #f0f8ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  touch-action: none;
+}
+
+/* 地図コンテナ */
+#game-area {
+  margin-top: 16px;
+}
+
+/* SVG 本体 */
+#map-svg {
+  border: 4px solid #43a047;
+  border-radius: 8px;
+  background: #fff;
+  display: block;
+  touch-action: none;
+}
+
+/* ボタン群：地図の下に */
+#controls {
+  width: 800px;               /* SVG と同じ幅 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 0 32px;        /* 上に余白、下も余白 */
+  pointer-events: auto;
+}
+
+/* 左右移動ボタンをまとめる箱 */
+#move-btns {
+  display: flex;
+  gap: 16px;
+}
+
+/* 全ボタン共通スタイル */
+#move-btns button,
+#btn-jump {
+  width: 80px;
+  height: 80px;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  touch-action: none;
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.2),
+              -4px -4px 8px rgba(255,255,255,0.7);
+  transition: transform .1s;
+}
+
+#move-btns button:active,
+#btn-jump:active {
+  transform: scale(0.9);
+}
+
+/* 左右ボタンの色 */
+#move-btns button {
+  background: linear-gradient(145deg, #ff9a9e, #fad0c4);
+}
+
+/* ジャンプボタンの色 */
+#btn-jump {
+  background: linear-gradient(145deg, #a0e7e5, #b4f8c8);
+}
